@@ -36,12 +36,14 @@ class Posts extends Component {
 
     render() {
 
-
+        // console.log(this.props);
         const poste = this.state.post.map(post => {
             const id = post.id;
             // console.log(id);
-            return <Link to={'/' + post.id} key={post.id} ><Post title={post.title} author={post.author}
-                clicked={() => this.postSelect(id)} /></Link>;
+            return <Link to={'/' + post.id} key={post.id} >
+                <Post title={post.title} author={post.author}
+                    clicked={() => this.postSelect(id)} />
+            </Link>;
         });
 
         // console.log(poste);
